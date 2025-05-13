@@ -10,11 +10,16 @@ import Experience from "../components/Experience";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Login from "../components/Login";
+import { useNavigate } from "react-router-dom";
 import ScrollToTopButton from "../components/ScrollToTopButton"; // adjust path
 
 
 
 const Home = () => {
+
+
+ const navigate = useNavigate();
 // for animation effects
 // for n times
   useEffect(() => {

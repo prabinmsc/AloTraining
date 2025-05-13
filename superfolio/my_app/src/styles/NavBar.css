@@ -71,7 +71,29 @@
   margin: 4px 0;
 }
 
-  
+  .navlogin-button {
+  background-color: #919191; 
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navlogin-button:hover {
+  background-color: #c3c2c1; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navlogin-button:active {
+  transform: scale(0.95); /* Slight press-down effect */
+}
+
   
  /* MOBILE */
 @media (max-width: 768px) {
@@ -88,6 +110,9 @@
     text-align: center;
     z-index: 999;
   }
+  .navlogin-button{
+    display: none;
+  }
 
   .nav-links.show {
     display: flex;
@@ -96,5 +121,6 @@
   .hamburger {
     display: flex;
   }
+
 }
   
