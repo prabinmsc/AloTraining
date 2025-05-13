@@ -1,0 +1,73 @@
+🔹 1. Add Event Listener to the Form
+javascript
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+This line adds a submit event listener to a form with the ID loginForm.
+
+When the form is submitted, it will execute the function inside instead of its default behavior.
+
+🔹 2. Prevent Default Form Submission
+javascript
+event.preventDefault();
+Prevents the form from actually submitting and refreshing the page.
+
+This is important for doing client-side validation before submitting.
+
+🔹 3. Get Input Values and Error Elements
+javascript
+let email = document.getElementById("email").value;
+let password = document.getElementById("password").value;
+let emailError = document.getElementById("emailError");
+let passwordError = document.getElementById("passwordError");
+Retrieves the email and password input values.
+
+Also fetches the elements where error messages will be displayed (emailError, passwordError).
+
+🔹 4. Clear Any Previous Error Messages
+javascript
+emailError.innerText = "";
+passwordError.innerText = "";
+Clears any existing error messages from previous form submissions.
+
+🔹 5. Start Validation Process
+javascript
+let isValid = true;
+A flag to keep track of whether all validations pass.
+
+🔹 6. Validate Email Format
+javascript
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailPattern.test(email)) {
+    emailError.innerText = "Please enter a valid email address.";
+    isValid = false;
+}
+Uses a regular expression to check if the email format is valid:
+
+Must contain @, no spaces, and at least one ..
+
+If invalid, shows an error and sets isValid to false.
+
+🔹 7. Validate Password Strength
+javascript
+let passwordPattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$/;
+if (!passwordPattern.test(password)) {
+    passwordError.innerText = "Password must be at least 8 characters long and include a number and special character.";
+    isValid = false;
+}
+Uses another regular expression to check password rules:
+
+Must be at least 8 characters long.
+
+Must include at least one number and one special character.
+
+If invalid, displays an error message and sets isValid to false.
+
+🔹 8. Final Check and Feedback
+javascript
+if (isValid) {
+    alert("Login successful!");
+    // Here you can proceed with form submission or authentication logic.
+}
+If all validations passed (isValid is still true), show an alert saying "Login successful!"
+
+This is where you would normally submit the form or call a login API.
