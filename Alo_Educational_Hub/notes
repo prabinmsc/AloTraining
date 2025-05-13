@@ -36,7 +36,7 @@ A flag to keep track of whether all validations pass.
 
 🔹 6. Validate Email Format
 javascript
-let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;q
 if (!emailPattern.test(email)) {
     emailError.innerText = "Please enter a valid email address.";
     isValid = false;
@@ -46,6 +46,30 @@ Uses a regular expression to check if the email format is valid:
 Must contain @, no spaces, and at least one ..
 
 If invalid, shows an error and sets isValid to false.
+
+
+The regular expression emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; is used to validate email addresses. Let's break it down:
+
+Components:
+/^ - Start of the string
+
+[^\s@]+ - One or more characters that are NOT whitespace or @
+
+[^\s@] means "any character except whitespace or @"
+
++ means "one or more of these"
+
+@ - The literal @ symbol (required in emails)
+
+[^\s@]+ - One or more characters that are NOT whitespace or @ (domain name part)
+
+\. - A literal dot (escaped with \ because . has special meaning in regex)
+
+[^\s@]+ - One or more characters that are NOT whitespace or @ (top-level domain)
+
+$/ - End of the string  
+
+
 
 🔹 7. Validate Password Strength
 javascript
@@ -61,6 +85,19 @@ Must be at least 8 characters long.
 Must include at least one number and one special character.
 
 If invalid, displays an error message and sets isValid to false.
+
+
+This regular expression is for password validation with the following requirements:
+
+^ and $ - Anchors to match the entire string from start to end
+
+(?=.*[0-9]) - Positive lookahead to ensure at least one digit (0-9) exists
+
+(?=.*[!@#$%^&*]) - Positive lookahead to ensure at least one special character from the set !@#$%^&* exists
+
+[A-Za-z0-9!@#$%^&*]{8,} - Matches any combination of letters (upper/lower case), digits, and the specified special characters, with a minimum length of 8 characters
+
+So this pattern requires passwords that:
 
 🔹 8. Final Check and Feedback
 javascript
