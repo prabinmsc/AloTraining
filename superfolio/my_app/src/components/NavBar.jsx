@@ -45,7 +45,7 @@ const NavBar = () => {
         <Link to="experience" smooth={true} duration={500} offset={-65}>Experience</Link>
         <Link to="contact" smooth={true} duration={500} offset={-50}>Contact</Link>
         <button onClick={() => navigate("/login")} className="navlogin-button">
-        <FontAwesomeIcon icon={faCircleUser} />
+        <FontAwesomeIcon icon={faCircleUser} /> <h3 className="hamlogin">Login</h3>
       </button>
       </div>
     </nav>

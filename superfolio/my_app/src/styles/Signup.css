@@ -259,6 +259,9 @@
   text-decoration: underline;
 }
 
+
+
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
   .signup-form {
@@ -297,3 +300,18 @@
 .close-btn:hover {
   transform: scale(1.1);
 }
+.close-btn:focus {
+  outline: none;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 3px rgb(255, 0, 0);
+} 
+/* .modal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.closing {
+  opacity: 0;
+  transform: translateY(-20px);
+} */

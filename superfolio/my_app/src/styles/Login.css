@@ -98,7 +98,7 @@
   margin-bottom: 0.5rem;
 }
 
-.signup-button {
+.signup- button {
   background: none;
   border: none;
   background-color: #fcb620;
@@ -133,8 +133,9 @@
 .close-btn:hover {
   transform: scale(1.1);
 }
-/* 
+
 .close-btn:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgb(255, 0, 0);
-} */
+  border-radius: 50%;
+  box-shadow: 0 0 3px 3px rgb(255, 0, 0);
+}

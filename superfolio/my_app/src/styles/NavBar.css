@@ -93,7 +93,9 @@
 .navlogin-button:active {
   transform: scale(0.95); /* Slight press-down effect */
 }
-
+.hamlogin{
+  display: none;
+}
   
  /* MOBILE */
 @media (max-width: 768px) {
@@ -111,8 +113,20 @@
     z-index: 999;
   }
   .navlogin-button{
-    display: none;
+    display: flex;
+    background-color: #f6f4f4; 
+  color: rgb(94, 94, 94);
+  border: none;
+  padding: 5px 5px;
+  border-radius: 0%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   }
+
 
   .nav-links.show {
     display: flex;
@@ -121,6 +135,10 @@
   .hamburger {
     display: flex;
   }
+  .hamlogin{
+  display: flex;
+  color: #454444;
+}
 
 }
   

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 
-const Login = ({ onClose }) => {
+const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -17,13 +17,13 @@ const Login = ({ onClose }) => {
   
   const navigate = useNavigate();
 
-  const handleClose = () => {
-    if (onClose) {
-      onClose(); // If passed as prop (for modals)
-    } else {
-      navigate('/'); // Default behavior - navigate to home
-    }
-  };
+  // const handleClose = () => {
+  //   if (onClose) {
+  //     onClose(); // If passed as prop (for modals)
+  //   } else {
+  //     navigate('/'); // Default behavior - navigate to home
+  //   }
+  // };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -94,9 +94,9 @@ const Login = ({ onClose }) => {
     }
   };
 
-  const handleSignUpClick = () => {
-    navigate('/signup');
-  };
+  // const handleSignUpClick = () => {
+  //   navigate('/signup');
+  // };
 
 
 
@@ -105,7 +105,7 @@ const Login = ({ onClose }) => {
       <div className="login-form">
         <div className="login-header">
           <h2>Login</h2>
-          <button className="close-btn" onClick={handleClose} aria-label="Close">
+          <button className="close-btn" onClick={() => navigate("/")} aria-label="Close">
             <FontAwesomeIcon 
               icon={faCircleXmark} 
               style={{ color: "#ff3d3d", fontSize: "1.5rem" }} 
@@ -151,7 +151,7 @@ const Login = ({ onClose }) => {
         
         <div className="signup-section">
           <p>Don't have an account?</p>
-          <button onClick={handleSignUpClick} className="signup-button">
+          <button onClick={() => navigate("/signup")} className="signup-button">
             Sign Up
           </button>
         </div>
