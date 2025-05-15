@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,5 +27,55 @@
     </div>
 
     <script src="EmailValidation.js"></script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+    <form id="validationForm">
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <span class="error" id="emailError"></span><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <span class="error" id="passwordError"></span><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone">
+        <span class="error" id="phoneError"></span><br><br>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let phone = document.getElementById("phone").value;
+
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            let phonePattern = /^[6-9]\d{9}$/;
+
+            document.getElementById("emailError").textContent = emailPattern.test(email) ? "" : "Invalid email format";
+            document.getElementById("passwordError").textContent = password.length >= 6 ? "" : "Password must be at least 6 characters long";
+            document.getElementById("phoneError").textContent = phonePattern.test(phone) ? "" : "Phone number must be 10 digits";
+        }
+    </script>
+
 </body>
 </html>
