@@ -30,7 +30,7 @@
   
   .experience-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin-top: 2rem;
   }
@@ -59,7 +59,7 @@
   
   .experience-company {
     color: #888;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-top: 0.25rem;
   }
   
@@ -71,14 +71,23 @@
   
   .experience-card-bottom p {
     margin-top: 0.5rem;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   
   
-  /* Show 2 columns on tablets and laptops */
-  @media (min-width: 768px) {
-    .experience-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+ @media (max-width: 480px) {
+  .experience {
+    padding: 1rem;
   }
-  
+  .experience-grid {
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    gap: 1rem;
+  }
+  .experience-card {
+    width: 100%; /* Make sure cards take full width */
+    border-radius: 8px;
+  }
+}

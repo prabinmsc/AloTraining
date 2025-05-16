@@ -11,7 +11,7 @@ const experiences = [
     title: "UI/UX Design",
     company: "Designerr Inc.",
     years: "2012–2014",
-    icon: uiUxIcon , 
+    icon: uiUxIcon,
   },
   {
     title: "App Development",
@@ -38,20 +38,20 @@ const Experience = () => {
     <section className="experience">
       <h2 className="experience-title">Experience</h2>
       <div className="marker">
-                <img src={marker} alt="marker img" />
+        <img src={marker} alt="marker img" />
       </div>
-      <div className="experience-grid fade-in-right">
-        {experiences.map((exp, idx) => (
-          <div className="experience-card fade-in-right" key={idx}>
-            <div className="experience-card-top">
-              <div>
-                <h3>{exp.title}</h3>
-                <p className="experience-company">
-                  {exp.company} <span>({exp.years})</span>
-                </p>
-              </div>
-              <img src={exp.icon} alt={`${exp.title} icon`} className="experience-icon-img" />
-            </div>
+          <div className="experience-grid ">
+              {experiences.map((exp, idx) => (
+                <div className="experience-card fade-in-right" key={idx}>
+                  <div className="experience-card-top">
+                    <div>
+                    <h3>{exp.title}</h3>
+                    <p className="experience-company">
+                    {exp.company} <span>({exp.years})</span>
+                    </p>
+                    </div>
+                    <img src={exp.icon} alt={`${exp.title} icon`} className="experience-icon-img" />
+                  </div>
             <div className="experience-card-bottom">
               <p>
                 Leverage agile frameworks to provide a robust synopsis for high level overviews.

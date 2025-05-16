@@ -18,9 +18,8 @@ const Myskill = () => {
     <div className="skills-container">
       <h2 className="skills-title">My Skills</h2>
       <div className="marker">
-                <img src={marker} alt="marker img" />
+        <img src={marker} alt="marker img" />
       </div>
-      <div className="underline" />
       <p className="skills-subtitle">
         I am a quick learner and specialize in multitude of skills required for Web
         Application Development and Product Design
@@ -28,11 +27,10 @@ const Myskill = () => {
 
       <div className="skills-grid">
         {skills.map((skill, index) => (
-          <div key={index} className="skill-item">
-            <div className="skill-header">
-              <span>{skill.name}</span>
-              <span>{skill.level}%</span>
-            </div>
+          <div key={index} className="skill-item"><div className="skill-header">
+            <span>{skill.name}</span>
+            <span>{skill.level}%</span>
+          </div>
             <div className="progress-bar">
               <div
                 className="progress-fill"

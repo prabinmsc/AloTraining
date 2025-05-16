@@ -43,8 +43,10 @@ const Testimonials = () => {
       <div className="testimonials-grid fade-in-left ">
         {testimonials.map((t, index) => (
           <div className="testimonial-card fade-in-left" key={index}>
+            <div className="testimonial-column">
             <div className="quote">❝</div>
             <p className="testimonial-text">{t.text}</p>
+            </div>
             <div className="testimonial-footer">
               
               <div className="testimonial-info">
