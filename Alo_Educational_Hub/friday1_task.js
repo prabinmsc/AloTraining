@@ -175,6 +175,12 @@
 // 3, difference btwn == and ===
 // 4,what is event in js
 // 5,Name 5 JavaScript Data Types?
+//5, who is the founder and when is js published??
+// JavaScript was created by Brendan Eich in 1995 while he was working
+//  at Netscape Communications. He developed it in just 10 days
+//   as a lightweight scripting language for web browsers. 
+//   Initially called Mocha, then LiveScript, it was finally 
+//   renamed JavaScript to align with the popularity of Java at the time.
 
 
 
@@ -238,8 +244,14 @@
 // 1 2 3 4 
 // 1 2 3 4 5 
 
-
-
+// let row = "";
+// for (let i = 1; i <= 5; i++) {
+    
+//     for (let j = 1; j <= 1; j++) {
+//         row += i;
+//     }
+//     console.log(row);
+// }
 
 
 // 4, check the  results and represent their grade  as Akhil : A+

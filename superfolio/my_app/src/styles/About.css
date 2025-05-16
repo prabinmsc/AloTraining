@@ -108,4 +108,13 @@
   .info-list strong{
     width: 100%;
   }
+ strong {
+    display: block;
+  }
+  
+  span {
+    display: block;
+    margin-top: 5px; 
+  
+}
 }

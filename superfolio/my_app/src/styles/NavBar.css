@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 4rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -33,16 +33,14 @@
   
   
   .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #111827;
-  }
-  .logo {
-    background-color: transparent;
-    border:none;
-    margin-left: 2rem;
-  }
-  
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #111827;
+  background-color: transparent;
+  border: none;
+  margin-left: 0;
+}
+
  .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -99,6 +97,10 @@
   
  /* MOBILE */
 @media (max-width: 768px) {
+
+  .navbar{
+    padding: 0 10px;
+  }
   .nav-links {
     display: none;
     position: absolute;
