@@ -21,6 +21,7 @@ html, body {
   font-weight: bold;
 }
 
+
 .marker {
   width: 100%;
   display: flex;
@@ -123,15 +124,20 @@ span{
   color: rgb(114, 114, 114);
 }
 
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .portfolio-item {
-    grid-row: span 1 !important;
-    height: auto;
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
-  
 }
